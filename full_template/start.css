@@ -1,0 +1,23 @@
+#first-table {
+    background-color: blue;
+}
+
+#first-table tr {
+    background-color: rgb(25, 216, 25);
+    
+}
+
+td {
+    padding: 20px;
+}
+
+
+.alert {
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+
+}
