@@ -1,0 +1,18 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: waterqualitywebsite
+region: nyc
+services:
+- environment_slug: python
+  git:
+    branch: master
+    repo_clone_url: https://github.com/gianlikescode/Water_quality_website.git
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: waterqualitywebsite
+  routes:
+  - path: /
+  run_command: gunicorn --worker-tmp-dir /dev/shm app:app
+  source_dir: /
